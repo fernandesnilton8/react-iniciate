@@ -1,0 +1,31 @@
+https://www.youtube.com/watch?v=2RWsLmu8yVc
+https://github.com/felipemotarocha/curso-de-react-yt
+
+comando para cria projecto usnado Vite
+npm create vite@5.5.2 .
+npm install
+npm run dev
+
+
+intalar tailwindcss
+npm install -D tailwindcss@3.4.10 postcss@8.4.41 autoprefixer@10.4.20
+npx tailwindcss init -p
+
+lucide trabalah com icon 
+
+npm install lucide-react@0.435.0
+
+Rotas
+npm install react-router-dom@6.26.1
+
+const navegate = useNavegate()
+const query = new URLSearchParams()
+query.set("nome_parm",valor)
+
+navegate('/path',query.toString())
+
+const [parms] = useStataParams()
+
+const param = parms.get("nome_parm")
+
+estrutura de pasta
