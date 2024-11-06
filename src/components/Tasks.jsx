@@ -1,4 +1,4 @@
-import { ChevronRightIcon, TrashIcon } from "lucide-react";
+import { CheckIcon, ChevronRightIcon, TrashIcon } from "lucide-react";
 import { useNavigate } from "react-router";
 
 function Tasks({tasks, onTaskClick, onDeleteTaskClick}){
@@ -31,7 +31,8 @@ function Tasks({tasks, onTaskClick, onDeleteTaskClick}){
                     task.IsCompleted && "line-through"
                     }`}
                 >
-                            {task.title}
+                    {task.IsCompleted && <stap className="text-green-500"><CheckIcon/></stap>}
+                    {task.title}
                 </button>
                 <button 
                     onClick={()=>onDetailsClick(task)}
