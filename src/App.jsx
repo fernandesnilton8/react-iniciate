@@ -7,10 +7,11 @@ import HeaderTitle from "./components/HeaderTitle";
 
 function App() {
 
-  const [tasks, setTasks] = useState(
-    //carregar dados de armazenado no localStorage, senão tiver retornar vaziu
-    JSON.parse(localStorage.getItem("tasks") || [])
-  )
+  const [tasks, setTasks] = useState(() => {
+    // Carregar dados armazenados no localStorage, senão retornar array vazio
+    const storedTasks = localStorage.getItem("tasks");
+    return storedTasks ? JSON.parse(storedTasks) : [];
+  })
 
   //efeito utilizado quando algo muda
   useEffect(()=>{
